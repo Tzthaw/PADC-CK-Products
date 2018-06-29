@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NewIn"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_regular_3x"
+            android:layout_centerInParent="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:src="@drawable/ic_add_shopping_cart"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/flat_grey_dark"
+        />
+    <TextView
+        android:id="@+id/product_detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="italic"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/layout"
+        android:weightSum="5"
+        android:layout_margin="@dimen/margin_medium"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/SliderDots"
+            android:layout_below="@+id/viewPager"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="fill"
+            android:layout_weight="4.1">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rotation="90"/>
+            <TextView
+                android:id="@+id/product_detail_info"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingStart="@dimen/margin_medium"
+                android:paddingEnd="@dimen/margin_medium"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/margin_medium"
+                android:layout_alignEnd="@id/viewPager"
+                android:drawableStart="@drawable/ic_info_outline"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/square_bg"
+                android:text="INFO" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/margin_small">
+            <ImageView
+                android:id="@+id/tv_CONSEQUENCES"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/colour"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_large">
+        <TextView
+            android:id="@+id/product_detail_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:background="@drawable/square_bg"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_medium"
+            android:paddingStart="@dimen/margin_large"
+            android:paddingEnd="@dimen/margin_large"
+            android:layout_marginStart="@dimen/margin_large"/>
+        <TextView
+            android:id="@+id/product_detail_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="US$ 49.00"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

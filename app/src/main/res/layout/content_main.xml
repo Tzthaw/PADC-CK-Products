@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.MainActivity"
+    android:background="@color/white"
+   >
+    
+    <LinearLayout
+        android:id="@+id/layout_adjust"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_medium"
+        android:background="@drawable/square_bg"
+        android:layout_margin="@dimen/margin_medium">
+        <ImageButton
+            android:id="@+id/grid_one"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:padding="@dimen/margin_small"
+            android:src="@drawable/square_one"/>
+        <ImageButton
+            android:id="@+id/grid_two"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:background="@color/white"
+            android:padding="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_large"
+            android:src="@drawable/square_two"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Sort Order"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/flat_grey_dark"
+            android:gravity="center_vertical|right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_below="@+id/layout_adjust">
+
+        <TextView
+            android:id="@+id/product_item_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/flat_grey_dark"
+            android:gravity="center_horizontal"/>
+
+        <com.example.ptut.padc_ck_products.components.SmartRecyclerView
+            android:id="@+id/items_recycler"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+        <include
+            android:id="@+id/empty_layout"
+            layout="@layout/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>
